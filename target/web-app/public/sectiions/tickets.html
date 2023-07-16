@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es-418">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Comprar Tickets</title>
+    <link rel="stylesheet" href="../../css/index.css">
+    <link rel="stylesheet" href="../../css/tickets.css">
+    <link rel="apple-touch-icon" href="./public/img/codoacodo.png" />
+    <link rel="shorcut icon" href="../img/codoacodo.png" type="image/x-png" />
+    <link rel="icon" href="../img/codoacodo.png" type="image/x-png" />
+</head>
+
+<body>
+
+    <body>
+        <header class="conteiner">
+            <nav class="row  navbar navbar-expand bg-dark pb-3 pt-3 ">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                    <div class="col-4 d-flex flex-row divNavImg align-items-center">
+                        <a href="../../index.html"><img class="navImg" src="../img/codoacodo.png" alt="..."></a>
+                        <p class="d-flex align-items-center mt-auto mb-auto text-light fs-3">Conf Bs As</p>
+                    </div>
+
+                    <ul class="col nav d-flex align-items-center flex-row justify-content-end">
+                        <li class="nav-item">
+                            <a class="nav-link text-light fs-5 active" aria-current="page" href="../../index.html">La
+                                conferencia</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white-50 fs-5" href="../../index.html#ORADORES">Los oradores</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white-50 fs-5" href="../../index.html#FECHAYLUGAR">El lugar y la
+                                fecha</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white-50 fs-5" href="../../index.html#SEORADOR">Conviértete en
+                                orador</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-success fs-5 me-5" href="#">Comprar
+                                tickets</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+    </body>
+    <main>
+        <section class="mt-5">
+            <div class="d-flex justify-content-center">
+                <div class="p-4 border-2 border border-primary rounded text-center listaprecios" id="categoria1">
+                    <p class="fs-4"><b>Estudiante</b></p>
+                    </p>
+                    <p>Tienen un descuento</p>
+                    <p class="fs-4"><b>80%</b></p>
+                    <p class="text-muted">* presentar documentación.</p>
+                </div>
+                <div class="p-4 border-2 border border-primary rounded text-center mx-4 listaprecios" id="categoria2">
+                    <p class="fs-4"><b>Treinee</b></p>
+                    </p>
+                    <p>Tienen un descuento</p>
+                    <p class="fs-4"><b>50%</b></p>
+                    <p class="text-muted">* presentar documentación.</p>
+                </div>
+                <div class="p-4 border-2 border border-primary rounded text-center listaprecios" id="categoria3">
+                    <p class="fs-4"><b>Junior</b></p>
+                    </p>
+                    <p>Tienen un descuento</p>
+                    <p class="fs-4"><b>15%</b></p>
+                    <p class="text-muted">* presentar documentación.</p>
+                </div>
+            </div>
+        </section>
+
+
+
+        <form class="mt-4 form">
+            <div class="text-center">
+                <p>VENTA</p>
+                <p class="fs-1"><b>VALOR DE TICKET $200</b></p>
+            </div>
+            <div>
+                <div class="d-flex mb-3">
+                    <div class="w-50">
+                        <input type="text" id="inputNombre" required class="form-control" placeholder="Nombre">
+                    </div>
+                    <div class="w-50 ms-2">
+                        <input type="text" id="inputApellido" required class="form-control" placeholder="Apellido">
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <input type="email" id="inputEmail" required class="form-control" placeholder="Correo">
+                </div>
+                <div class="d-flex mb-3">
+                    <div class="w-50">
+                        <label for="labelCantidad" class="form-label">Cantidad</label>
+                        <input type="number" id="inputCantidadTicket" required id="labelCantidad" class="form-control"
+                            value="0">
+                    </div>
+                    <div class="w-50 ms-2">
+                        <label for="exampleDataList" class="form-label">Categoria</label>
+                        <select name="exampleDataList" class="form-control" id="inputList">
+                            <option id="option1" value="Estudiante">Estudiante</option>
+                            <option id="option2" value="Trainee">Treinee</option>
+                            <option id="option3" value="Junior">Junior</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="d-flex p-3 mb-3 bg-info rounded">
+                    <p class="d-flex align-items-center mb-0">Total a Pagar: $ <span id="totalAPagar"></span></p>
+                </div>
+                <div class="d-flex">
+                    <div class="w-50">
+                        <input type="reset" id="buttonDelete" required value="Borrar" class="btn btn-danger w-100">
+                    </div>
+                    <div class="w-50 ms-3">
+                        <input type="button" required value="Resumen" id="buttonSuccess" class="btn btn-success w-100">
+                    </div>
+                </div>
+            </div>
+            <div>
+            </div>
+        </form>
+    </main>
+    <footer class="col mt-5 mb-2">
+        <div class="row">
+            <ul class="d-flex flex-row justify-content-evenly p-5 listas">
+                <li>Preguntas Frecuentes</li>
+                <li>Contáctanos</li>
+                <li>Prensa</li>
+                <li>Conferencias</li>
+                <li>Términos y Condiciones</li>
+                <li>Privacidad</li>
+                <li>Estudiantes</li>
+            </ul>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d82d4468f0.js" crossorigin="anonymous"></script>
+    <script src="../../js/sectionTickets.js"></script>
+
+</html>

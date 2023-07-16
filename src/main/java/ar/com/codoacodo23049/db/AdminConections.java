@@ -6,14 +6,13 @@ import java.sql.DriverManager;
 public class AdminConections {
 
     public static Connection getConnection() {
-        String hosts = "localhost";// localhost
+        String hosts = "127.0.0.1";// localhost
         String port = "3306";
         String password = "";
         String username = "root";
 
         // driver de conexion a la base de datos
         String driverClassName = "com.mysql.cj.jdbc.Driver";
-
         String dbName = "codoacodo";
 
         Connection connection;

@@ -5,17 +5,29 @@ import java.time.format.DateTimeFormatter;
 import java.util.UUID;
 
 public class Oradores {
-    protected String nombre, apellido, descripcion, consulta;
+    protected String nombre, apellido, descripcion, consulta, fechaString;
     protected int state;
     protected LocalDateTime fecha;
+    protected Long id;
 
     public Oradores(String nombre, String apellido, String descripcion) {
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.descripcion = descripcion;
+        extracted(nombre, apellido, descripcion);
         this.fecha = LocalDateTime.now();
         this.state = 0;
         this.consulta = UUID.randomUUID().toString();
+    }
+
+    public Oradores(Long id, String nombre, String apellido, String descripcion, String fecha, String consulta) {
+        extracted(nombre, apellido, descripcion);
+        this.id = id;
+        this.fechaString = fecha;
+        this.consulta = consulta;
+    }
+
+    private void extracted (String nombre, String apellido, String descripcion){
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.descripcion = descripcion;
     }
 
     private String toDateData() {
@@ -52,6 +64,10 @@ public class Oradores {
     public String getFecha() {
         return toDateData();
     }
+    
+    public Long getId() {
+        return id;
+    }
 //----------------
     public void setNombre(String nombre) {
         this.nombre = nombre;
@@ -64,7 +80,4 @@ public class Oradores {
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
-
-    
-
 }

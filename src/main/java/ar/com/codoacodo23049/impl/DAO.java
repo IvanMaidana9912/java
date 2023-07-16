@@ -5,12 +5,9 @@ import java.util.ArrayList;
 
 public interface DAO {
     public Oradores getById(Long id) throws Exception;
-
-    public void delete(String consulta) throws Exception;
-
+    public void delete(Long id) throws Exception;
     public ArrayList<Oradores> findAll() throws Exception;
-
     public void update(Oradores orador) throws Exception;
-
     public void create(Oradores orador) throws Exception;
+    public ArrayList<Oradores> findAllByTitle(String clave) throws Exception;
 }

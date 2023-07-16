@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.row {
+    margin-right: 0 !important;
+}
+
+.navImg {
+    width: 6vw;
+}
+
+.divNavImg {
+    margin-left: 60px;
+}
+
+.divImgCiudades {
+    height: 65vh;
+}
+
+.divImageCover {
+    height: 65vh;
+    width: 99vw;
+    background-size: cover;
+    z-index: -1;
+}
+
+.divImageCover2 {
+    z-index: 0;
+    height: 65vh;
+    margin-top: 0vh;
+    padding-right: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    box-shadow: 35px 21px 400px 200px rgba(0, 0, 0, 0.5) inset;
+    -webkit-box-shadow: 35px 21px 400px 200px rgba(0, 0, 0, 0.5) inset;
+    -moz-box-shadow: 35px 21px 400px 200px rgba(0, 0, 0, 0.5) inset;
+}
+
+.textDescription {
+    width: 38%;
+}
+
+.altoDelParrafoCarsOradores {
+    height: 15vh;
+}
+
+.cardList {
+    width: 18rem;
+}
+
+footer {
+    background: #1c3846;
+    background: linear-gradient(90deg, #1c3846 0%, #1d5271 80%);
+    background: -webkit-linear-gradient(90deg, #1c3846 0%, #1d5271 80%);
+    background: -moz-linear-gradient(90deg, #1c3846 0%, #1d5271 80%);
+    color: white;
+}
+
+li {
+    list-style: none;
+}
+
+li:hover {
+    color: black;
+}
+
+@media screen and (max-width:768px) {
+    #navbarTogglerDemo01 {
+        display: flex !important;
+        flex-basis: auto;
+        flex-direction: column;
+    }
+
+    a{
+        display: flex;
+    }
+    .textDescription {
+        width: 100%;
+    }
+
+    .divImageCover {
+        width: 100vw;
+        display: flex;
+        position: absolute;
+        object-fit: cover;
+    }
+
+    .divImageCover2 {
+        padding-right: 15px;
+        padding-right: 15px;
+        z-index: 1;
+        display: flex;
+        position: absolute;
+        align-items: center;
+    }
+
+    .d-flex {
+        display: flex !important;
+        flex-direction: column;
+    }
+
+    .listas {
+        flex-wrap: wrap;
+    }
+
+    .cardList {
+        width: 100%;
+    }
+}
